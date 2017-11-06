@@ -108,17 +108,35 @@ footer {
     z-index: 1;
 
     div {
-        width: 100%;
+        width: 150%;
         height: 100%;
-        background-image: url('/assets/landscape.jpg');
+        position: fixed;
+
         background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
-        opacity: 0.5;
 
-        @media screen and (max-width: $grid-breakpoints-sm) {
-            background-image: url('/assets/portrait.jpg');
+        opacity: 0;
+        transform: translateX(0);
+        transition: opacity 3s ease-in-out;
+
+        &.visible {
+            opacity: 0.6;
         }
+
+        &.top {
+            animation: background-animation 18s linear infinite;
+        }
+    }
+}
+
+@keyframes background-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-25%);
     }
 }
 

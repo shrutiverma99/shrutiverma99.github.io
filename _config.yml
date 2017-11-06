@@ -13,6 +13,9 @@ markdown: kramdown
 sass:
   sass_dir: css
 
+plugins:
+  - jekyll-coffeescript
+
 # Exclude from processing.
 exclude:
   - Gemfile
