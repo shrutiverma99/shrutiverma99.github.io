@@ -112,6 +112,8 @@ footer {
         height: 100%;
         background-image: url('/assets/landscape.jpg');
         background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
         opacity: 0.5;
 
         @media screen and (max-width: $grid-breakpoints-sm) {
