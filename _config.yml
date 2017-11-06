@@ -1,0 +1,24 @@
+title: Shruti Verma
+email: cshruti369@gmail.com
+description: Shruti's Website
+url: "https://shrutiverma99.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: shrutiverma99
+medium_username: cshruti369
+linkedin_username: shruti99
+github_username:  shrutiverma99
+gaid:
+
+# Build settings
+markdown: kramdown
+sass:
+  sass_dir: css
+
+# Exclude from processing.
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/

@@ -1,0 +1,125 @@
+---
+---
+
+// https://github.com/twbs/bootstrap/blob/v4-dev/scss/_variables.scss#L171-L182
+$grid-breakpoints-xs: 0;
+$grid-breakpoints-sm: 576px;
+$grid-breakpoints-md: 768px;
+$grid-breakpoints-lg: 992px;
+$grid-breakpoints-xl: 1200px;
+
+$bg: rgba(0, 0, 0, 0.5);
+$fg: #FFF;
+
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    background-color: $bg;
+    color: $fg;
+
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    line-height: 1.65em;
+
+    box-sizing: border-box;
+    padding: 100px 60px 60px 60px;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    @media screen and (max-width: $grid-breakpoints-lg) {
+        padding: 90px 50px 50px 50px;
+    }
+
+    @media screen and (max-width: $grid-breakpoints-md) {
+        font-size: 18px;
+        padding: 80px 45px 45px 45px;
+    }
+
+    @media screen and (max-width: $grid-breakpoints-sm) {
+        font-size: 16px;
+        padding: 60px 40px 40px 40px;
+    }
+
+    > * {
+        z-index: 2;
+    }
+}
+
+header {
+    h1 {
+        font-size: 2.5em;
+    }
+}
+
+footer {
+    transition: opacity 0.2s ease-in-out;
+    opacity: 0.75;
+    margin-top: 1em;
+    font-size: 0.75em;
+
+    &:hover {
+        opacity: 1;
+    }
+
+    a {
+        color: $fg;
+        text-decoration: none;
+        display: inline-block;
+
+        &:hover {
+            color: lightgreen;
+        }
+    }
+
+    .links {
+        margin-bottom: 0.5em;
+
+        .icon {
+            padding-right: 0.5em;
+            width: 2.5em;
+            height: 2.5em;
+
+            &::before {
+                font-family: FontAwesome;
+                font-size: 1.75em;
+            }
+        }
+    }
+}
+
+#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1;
+
+    div {
+        width: 100%;
+        height: 100%;
+        background-image: url('/assets/landscape.jpg');
+        background-position: center;
+        opacity: 0.5;
+
+        @media screen and (max-width: $grid-breakpoints-sm) {
+            background-image: url('/assets/portrait.jpg');
+        }
+    }
+}
+
+#page-404 {
+    padding-left: 100px;
+}
